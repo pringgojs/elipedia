@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elipedia - by Elitery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="elipedia" class="row justify-content-center"></div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        render();
+      });
+
+      function render() {
+        let html = "";
+        for (let i = 1; i <= 7; i++) {
+          console.log(i);
+          html +=
+            `<img style="box-shadow: 9px 13px 21px -1px rgba(0,0,0,0.54);
+            -webkit-box-shadow: 9px 13px 21px -1px rgba(0,0,0,0.54);
+            -moz-box-shadow: 9px 13px 21px -1px rgba(0,0,0,0.54);" src="img-elipedia/` +
+            i +
+            `.png" class="img-fluid mb-5" alt="Elipedia ` +
+            i +
+            `" />`;
+        }
+
+        $("#elipedia").html(html);
+      }
+    </script>
+  </body>
+</html>
